@@ -106,13 +106,14 @@ else{
 
 let custMoney = 45
 let productAmount = 100
+let difference = custMoney - productAmount
 
 if (custMoney > productAmount) {
-    console.log(`you paid extra here is you ${custMoney - productAmount} dollars change`)
+    console.log(`you paid extra here is you ${difference} dollars change`)
 }
 else if ( custMoney === productAmount) {
     console.log('you paid the exact amount')
 }
 else{
-    console.log(`You still owe ${productAmount - custMoney} dallars`)
+    console.log(`You still owe ${difference * (-1)} dallars`)
 }
