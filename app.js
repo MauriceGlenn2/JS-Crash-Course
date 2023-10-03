@@ -117,3 +117,64 @@ else if ( custMoney === productAmount) {
 else{
     console.log(`You still owe ${difference * (-1)} dallars`)
 }
+
+//<--------------------------------------Logical Operators---------------------------------------->
+// && checks if the left and right side are true
+//both need to be true to run
+
+
+let cusDollars = 50
+let storePrice = 40
+let isStoreOpen = false
+
+if (cusDollars >= storePrice && isStoreOpen === true){
+    console.log('We have enough cash for product, print recept')
+}
+else{
+    console.log('the store is closed')
+}
+
+// || checks if the left or right side of the comparison is true
+
+let custDollars = 50;
+let storesPrice = 40;
+let isStoresOpen = false;
+
+if (custDollars >= storesPrice || isStoresOpen) {
+  console.log("We have enough cash for product, print recept");
+} else {
+  console.log("the store is closed");
+}
+
+//<--------------------------------------Truthy vs falsey---------------------------------------->
+
+// If statements will run with truthy values, else statement run if falsey
+
+let val =""
+
+if (val) {
+    console.log('truthy value', !!val)
+}
+else{
+    console.log('falsey value', !!val) //prints falsey
+}
+
+let otherVal ="David"
+if (otherVal) {
+    console.log(!!otherVal) //prints true
+}
+else {
+    console.log(!!otherVal)
+}
+
+//<--------------------------------------Ternary Operators---------------------------------------->
+let hot = true
+hot ? console.log('weather is hot out') : console.log('weather is cold') //weather is hot
+
+let hotOut = false
+hotOut ? console.log('weather is hot out') : console.log('weather is cold') //weather is cold
+
+let subscribed = true
+let logIn = true
+
+subscribed && logIn ? console.log('show the video') : console.log('log in please')
