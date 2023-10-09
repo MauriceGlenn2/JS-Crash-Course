@@ -64,12 +64,12 @@ const statusRef = document.querySelector(".status");
 //placing data in elements from created promise
 
 
-// async function main() {
-//   const status = await getSubscriptionStatus(); //shows VIP in console
-//   statusRef.innerHTML = status
-// }
+async function main() {
+  const status = await getSubscriptionStatus(); //shows VIP in console
+  statusRef.innerHTML = status
+}
 
-// main();
+
 
 //<--------------------practice problem--------------->
 
@@ -83,26 +83,30 @@ const statusRef = document.querySelector(".status");
  * console log results of the getVideo(status) in main ()
  */
 
-
-function getVideo (subscription) {
-    return new Promise((resolve, reject) => {
-        if ("VIP" === resolve){
-            console.log("show video")
-        }
-        if ("FREE" === resolve){
-            console.log('show trailer')
-        }
-        else{
-            console.log("no video")
-        }
+function getSubscriptionStatus() {                // creat function
+    return new Promise((resolve, reject) => {    //exceptes resolve and reject, creates promise
+        resolve("FREE")                           //locked promise
     })
 }
 
-async function main() {
-  const status = await Subscription(); //shows VIP in console
-  console.log(status)
-  statusRef.innerHTML = status;
-  console.log(getVideo(status))
+function getVideo (subscriptionStatus) {           
+    return new Promise((resolve, reject) => {
+        if (subscriptionStatus === "VIP"){
+            resolve("show video")
+        }
+        else if (subscriptionStatus === "FREE"){
+            resolve('show trailer')
+        }
+        else{
+            reject("no video")
+        }
+    })
+    
 }
 
+async function main() {
+  const status = await getSubscriptionStatus();
+  const videoStatus = await getVideo(status)
+    console.log(videoStatus)
+}
 main();
