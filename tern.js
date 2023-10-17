@@ -21,3 +21,6 @@ let answer =
     ? "give recept"
     : "do not give recept";
 console.log(answer);
+
+// true && true -> true
+//true && false -> false
