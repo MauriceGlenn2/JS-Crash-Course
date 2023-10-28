@@ -27,13 +27,13 @@ console.log(newArr);
 //     return true;
 //   };
 // });
-console.log(newArr2); //prints [20,30,40]
+// console.log(newArr2); //prints [20,30,40]
 
 //how to code one line
-let arr3 = [20, 30, 40, 50, 100]; // if one line is just returning you can remove {} from callback
-let newArr3 = arr2.filter((element) => element < 50); //if one arguement, dont need ()
-//since this is a true statement we can just return
-console.log(newArr3); //prints [20,30,40]
+// let arr3 = [20, 30, 40, 50, 100]; // if one line is just returning you can remove {} from callback
+// let newArr3 = arr2.filter((element) => element < 50); //if one arguement, dont need ()
+// //since this is a true statement we can just return
+// console.log(newArr3); //prints [20,30,40]
 
 //Practice Problem
 /**
@@ -69,8 +69,21 @@ console.log(kidsPassingScores);
 
 //array Mapping arr.map this accepts a callback
 
-let arr4 = [1, 4, 9, 16];
+// let arr4 = [1, 4, 9, 16];
 
-arr.map((elements) => {
-  console.log(elements);
-});
+// arr.map((elements) => {
+//   console.log(elements);
+// });
+
+//new way of adding arrays, using reduce
+// a = 0, c = 1 => a = 1
+// a = 1, c = -1 => a = 0
+// a = 0, c = 2 => a = 2
+// a = 2, c = 3 => a =5
+const arr5 = [1, -1, 2, 3];
+
+const sum1 = arr5.reduce((accumlator, current) => {
+  return accumlator + current;
+}, 0);
+
+console.log(sum1);
