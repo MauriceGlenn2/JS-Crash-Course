@@ -7,19 +7,19 @@
  * reverseInt(-50) === -5
  */
 
-const reverseInteger = (int) => {
-  let reversed = parseInt(int.toString().split("").reverse().join(""));
-  if (int < 0) {
-    return reversed * -1;
-  }
-  return reversed;
-};
+// const reverseInteger = (int) => {
+//   let reversed = parseInt(int.toString().split("").reverse().join(""));
+//   if (int < 0) {
+//     return reversed * -1;
+//   }
+//   return reversed;
+// };
 
 //better way if ternary 
-const reverseInteger = (int) => {
-  let reversed = parseInt(int.toString().split("").reverse().join(""));
-  return int < 0 ? reversed * -1 : reversed;
-};
+// const reverseInteger = (int) => {
+//   let reversed = parseInt(int.toString().split("").reverse().join(""));
+//   return int < 0 ? reversed * -1 : reversed;
+// };
 
 //cleaning up code
 const reverseInteger = (int) => {
@@ -28,8 +28,8 @@ const reverseInteger = (int) => {
 };
 
 
+console.log(reverseInteger())
 
-module.exports = reverseInteger;
 
 
 
